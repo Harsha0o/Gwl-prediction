@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% block title %}Home | HydroScope{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="full-section hero">
+    <div class="section-content">
+        <div class="text-block" data-aos="fade-right">
+            <h1>🌊 Welcome to HydroScope</h1>
+            <p>
+                Predict groundwater levels with precision and ease. Enter your location, analyze data, and make informed decisions for water resource management. HydroScope harnesses cutting-edge machine learning models trained on geospatial and historical data to deliver accurate predictions. Gain insights into aquifer health, water table fluctuations, and seasonal variations impacting groundwater resources.
+            </p>
+            
+            <a href="/predict" class="btn-main">Start Prediction →</a>
+        </div>
+        <div class="image-block" data-aos="zoom-in">
+            <img src="{{ url_for('static', filename='images/groundwater.png') }}" alt="Groundwater" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<!-- Leverage Data Section -->
+<section class="full-section leverage">
+    <div class="section-content">
+        <div class="image-block" data-aos="fade-up">
+            <img src="{{ url_for('static', filename='images/analytics.png') }}" alt="Leverage Data" class="img-fluid">
+        </div>
+        <div class="text-block" data-aos="fade-left">
+            <h2> Leverage Data</h2>
+            <p>
+                Use advanced data analytics to gain insights into groundwater patterns. Visualize trends, track changes, and apply predictive models for smarter water management. HydroScope integrates real-time sensor data, historical datasets, and satellite imagery to deliver a comprehensive understanding of aquifer behavior. Our platform supports customizable dashboards, allowing you to monitor specific parameters like recharge rates, extraction volumes, and seasonal shifts.
+            </p>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="container py-5 feature-sections">
+    <div class="row justify-content-center">
+        <div class="col-md-5 mb-4 section-item" data-aos="fade-up">
+            <i class="bi bi-map"></i>
+            <h5>Map</h5>
+            <p>Interactive map view to locate and explore groundwater levels.</p>
+        </div>
+        <div class="col-md-5 mb-4 section-item" data-aos="fade-up">
+            <i class="bi bi-bar-chart"></i>
+            <h5>Visualization</h5>
+            <p>Graphical visualizations to analyze water trends easily.</p>
+        </div>
+        <div class="col-md-5 mb-4 section-item" data-aos="fade-up">
+            <i class="bi bi-cloud-sun"></i>
+            <h5>Forecast</h5>
+            <p>Predict future water levels using advanced forecasting models.</p>
+        </div>
+        <div class="col-md-5 mb-4 section-item" data-aos="fade-up">
+            <i class="bi bi-diagram-3"></i>
+            <h5>Comparison</h5>
+            <p>Compare current readings with historical groundwater data.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="full-section statistics">
+    <div class="section-content">
+        <div class="text-block" data-aos="fade-right">
+            <h2>Statistics at a Glance</h2>
+            <p>
+                Access clear, concise statistics on groundwater levels and trends. Stay informed with up-to-date charts, summaries, and visual reports that support your decisions. HydroScope offers interactive dashboards where you can track key performance indicators (KPIs) such as recharge rates, drawdown patterns, and seasonal variations. Compare year-over-year data to identify long-term shifts and emerging risks, helping you create proactive water management strategies. Drill down into regional or site-specific statistics to uncover localized insights and guide targeted interventions. Export detailed reports in multiple formats, share insights with stakeholders, and integrate statistical outputs into your broader resource planning workflows.
+            </p>
+        </div>
+        <div class="image-block" data-aos="fade-up">
+            <img src="{{ url_for('static', filename='images/statistics.png') }}" alt="Statistics" class="img-fluid">
+        </div>
+    </div>
+</section>
+<div class="text-center mt-4" data-aos="fade-up">
+    <a href="/predict" class="btn btn-main btn-lg shadow-sm">
+         Start Prediction →
+    </a>
+</div>
+
+<!-- Sliding Collapsible Cards Section -->
+<section class="container py-5">
+    <div class="accordion" id="infoAccordion">
+        <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                     What is HydroScope?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+                <div class="accordion-body">
+                    HydroScope is a predictive tool that helps assess groundwater levels using advanced models.
+                    It provides accurate insights and supports data-driven water management.
+                    Designed for easy use across multiple sectors.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                    How does HydroScope predict groundwater levels?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+                <div class="accordion-body">
+                    It combines geospatial data, historical patterns, and real-time inputs.
+                    Predictive algorithms process this information for accurate forecasts.
+                    Results are visualized with interactive maps and charts.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                     Who can benefit from using HydroScope?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+                <div class="accordion-body">
+                    Farmers, policymakers, researchers, and urban planners.
+                    Environmental agencies and water resource managers.
+                    Any stakeholder needing reliable groundwater insights.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                     Can I use HydroScope for my region?
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#infoAccordion">
+                <div class="accordion-body">
+                    Yes! HydroScope is designed for flexibility across regions.
+                    Simply enter your location's latitude and longitude.
+                    The system adjusts predictions based on local conditions.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
